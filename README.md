@@ -5,11 +5,20 @@ pcl sample program on ROS(Robot Operating System)
 Please prepare rgbd sensor(ex:Kinect, Realsense) and build this package
 
 ## downsampling
+Execute following command:
 ```sh
-$ rosrun pcl_ros_processing downmpling input:=/SR300/depth/points
+$ rosrun pcl_ros_processing downsampling input:=/camera/depth_registered/points
 ```
 
+Execute following command for changing downsampling rate:
+```sh
+$ rosparam set down_rate 0.01
+```
+`down_rate` means voxel size
+
+
 ## planar segmentation
+Execute following command:
 ```sh
 $ rosrun pcl_ros_processing planar_segmentation input:=/camera/depth_registered/points
 ```
@@ -19,6 +28,7 @@ for rviz visualization
 $ rosrun rviz rviz
 ```
 
+for pcl viewer visualization
 ```sh
 $ pcl_viewer save.pcd
 ```
@@ -31,7 +41,6 @@ $ rosrun pcl_ros_processing color_filter_rgb input:=/camera/depth_registered/poi
 ```
 
 for hsv
-
 ```sh
 $ rosrun pcl_ros_processing color_filter_hsv input:=/camera/depth_registered/points
 ```
@@ -41,6 +50,7 @@ for rviz visualization
 $ rosrun rviz rviz
 ```
 
+for pcl viewer visualization
 ```sh
 $ pcl_viewer save.pcd
 ```
