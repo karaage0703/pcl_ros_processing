@@ -70,7 +70,7 @@ int
 main (int argc, char** argv)
 {
   // Initialize ROS
-  ros::init (argc, argv, "pcl_ros_processing");
+  ros::init (argc, argv, "planar_segmentation");
   ros::NodeHandle nh;
 
   // Set ROS param

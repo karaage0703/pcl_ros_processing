@@ -41,7 +41,7 @@ int
 main (int argc, char** argv)
 {
   // Initialize ROS
-  ros::init (argc, argv, "pcl_ros_processing");
+  ros::init (argc, argv, "downsampling");
   ros::NodeHandle nh;
 
   // Set ROS param

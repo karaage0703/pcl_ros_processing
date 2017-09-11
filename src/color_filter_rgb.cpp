@@ -62,7 +62,7 @@ int
 main (int argc, char** argv)
 {
   // Initialize ROS
-  ros::init (argc, argv, "pcl_ros_processing");
+  ros::init (argc, argv, "color_filter_rgb");
   ros::NodeHandle nh;
 
   ros::param::set("max_r", 255);
